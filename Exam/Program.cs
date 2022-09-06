@@ -5,13 +5,13 @@ using System.IO;
 namespace Exam // Note: actual namespace depends on the project name.
 {
     public class Program
-    {        
+    {
         /// <summary>
         /// Метод для рассчета процентов
         /// </summary>
         /// <param name="cash">сумма вклада</param>
         /// <returns>результат подсчета ставки</returns>
-        private static double interestСalculation(double cash)
+        public static double interestСalculation(double cash)
         {
             double money = 0;
             double procent = 0;
@@ -52,7 +52,7 @@ namespace Exam // Note: actual namespace depends on the project name.
         /// <param name="procent">процентная ставка</param>
         /// <param name="years">временной промежуток за который будут начисляться проценты</param>
         /// <returns></returns>
-        private static double interestAccrual(double cash, double procent, int years) // метод 
+        public static double interestAccrual(double cash, double procent, int years) // метод 
         {
             double betBank = 0.08;
             for (int i = 1; i <= years * 12; i++)
@@ -74,7 +74,7 @@ namespace Exam // Note: actual namespace depends on the project name.
             return Math.Round(cash, 2);
         }
 
-        private static double calculationMax() // метод для подсчета максимального дохода за год
+        public static double calculationMax() // метод для подсчета максимального дохода за год
         {
             double max = 0;
             double maxMoney = 0;
@@ -141,10 +141,7 @@ namespace Exam // Note: actual namespace depends on the project name.
         /// <param name="diagnostic">строка передающаяся для записи в отладочный файл</param>
         public static void conclusionDebag(string diagnostic)
         {
-            string location = Environment.CurrentDirectory;
-            location = location.Insert(location.Length, "Diagnostic.txt"); // указание пути к файлу в который будет записываться отладочная информация
-            FileStream file = new FileStream(location, FileMode.Create);
-            file.Close();
+         
             TextWriterTraceListener tr = new TextWriterTraceListener(File.AppendText("Diagnostic.txt"));
             Trace.Listeners.Add(tr);
             Debug.WriteLine(diagnostic);
