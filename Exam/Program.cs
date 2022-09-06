@@ -74,7 +74,7 @@ namespace Exam // Note: actual namespace depends on the project name.
             return Math.Round(cash, 2);
         }
 
-        private static double calculationMax()
+        private static double calculationMax() // метод для подсчета максимального дохода за год
         {
             double max = 0;
             double maxMoney = 0;
@@ -96,10 +96,10 @@ namespace Exam // Note: actual namespace depends on the project name.
 
         static void Main(string[] args)
         {
-         while(true)
+         while(true) // цикл для диалога с пользователем
             {
                 conclusionDebag("Начало работы программы");
-                Console.Write("Хотите начать работу программы? Введите 'да' или 'нет' (ввод чувствителен к регистру):");
+                Console.Write("Хотите начать рассчет вклада? Введите 'да' или 'нет' (ввод чувствителен к регистру):");
                 string answer = Console.ReadLine();
                 if (answer == "да")
                 {
