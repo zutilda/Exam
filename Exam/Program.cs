@@ -129,7 +129,7 @@ namespace Exam // Note: actual namespace depends on the project name.
                     obj.conclusionFile(res);
                     conclusionDebag("Запись ответа в файл");
                 }
-                else Environment.Exit(0);
+                else Environment.Exit(0); // осуществление выхода из программы
                 Debug.WriteLine("Завершение работы программы");
             }
 
