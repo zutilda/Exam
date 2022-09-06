@@ -130,6 +130,7 @@ namespace Exam // Note: actual namespace depends on the project name.
                     conclusionDebag("Запись ответа в файл");
                 }
                 else Environment.Exit(0);
+                Debug.WriteLine("Завершение работы программы");
             }
 
         }
